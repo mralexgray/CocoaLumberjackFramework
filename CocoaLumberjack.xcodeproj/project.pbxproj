@@ -137,7 +137,7 @@
 			children = (
 				2765C681161CC34100E21ECB /* CocoaLumberjack */,
 				2765C67E161CC34100E21ECB /* Frameworks */,
-				2765C6BB161CCB5900E21ECB /* Licenses */,
+				2765C6BB161CCB5900E21ECB /* Resources */,
 				2765C67D161CC34100E21ECB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,14 +191,14 @@
 			path = Frameworks/CocoaLumberjack/Lumberjack/Extensions;
 			sourceTree = SOURCE_ROOT;
 		};
-		2765C6BB161CCB5900E21ECB /* Licenses */ = {
+		2765C6BB161CCB5900E21ECB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				277E3C74161CE4C2006FEAA5 /* VERSION */,
 				2765C6BC161CCB6A00E21ECB /* LICENSE.txt */,
 				2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */,
 			);
-			name = Licenses;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2765C6CF161CCD2B00E21ECB /* Other Frameworks */ = {
