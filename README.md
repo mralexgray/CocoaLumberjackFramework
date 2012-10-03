@@ -1,6 +1,7 @@
 # CocoaLumberjackFramework
 
-A Framework distribution of [CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack).
+A Framework distribution of [CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack)
+for iOS and OS X.
 
 # Motivation
 
