@@ -378,14 +378,14 @@
 		2765C6C2161CCBC600E21ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 			};
 			name = Debug;
 		};
 		2765C6C3161CCBC600E21ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 			};
 			name = Release;
 		};
