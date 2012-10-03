@@ -15,7 +15,7 @@ the Framework functions. This makes debugging a little more difficult.
 
 # Procedure
 
-This is a general description of how this was achieved.
+This is a description of how this distribution was created.
 
 1.  Create directory
 2.  Add standard .gitignore
