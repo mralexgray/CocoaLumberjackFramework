@@ -1,4 +1,4 @@
-# Software License Agreement (MIT License)
+Software License Agreement (MIT License)
 
 Copyright (c) 2012 Arlo Louis O'Keeffe, ASE Group of Frank Maurer (University of Calgary)
 
