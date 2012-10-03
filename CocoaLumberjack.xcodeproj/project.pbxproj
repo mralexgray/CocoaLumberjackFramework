@@ -56,6 +56,8 @@
 		2765C6F1161CD07300E21ECB /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C69C161CC4EC00E21ECB /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2765C6F2161CD0B400E21ECB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2765C6BC161CCB6A00E21ECB /* LICENSE.txt */; };
 		2765C6F3161CD0B400E21ECB /* CocoaLumberjack.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */; };
+		277E3C76161CE4CD006FEAA5 /* VERSION in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277E3C74161CE4C2006FEAA5 /* VERSION */; };
+		277E3C77161CE4D2006FEAA5 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 277E3C74161CE4C2006FEAA5 /* VERSION */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */,
+				277E3C76161CE4CD006FEAA5 /* VERSION in CopyFiles */,
 				2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +109,7 @@
 		2765C6D0161CCD2B00E21ECB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2765C6D1161CCD2B00E21ECB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2765C6D2161CCD2B00E21ECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		277E3C74161CE4C2006FEAA5 /* VERSION */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 		2765C6BB161CCB5900E21ECB /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
+				277E3C74161CE4C2006FEAA5 /* VERSION */,
 				2765C6BC161CCB6A00E21ECB /* LICENSE.txt */,
 				2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */,
 			);
@@ -310,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277E3C77161CE4D2006FEAA5 /* VERSION in Resources */,
 				2765C6F2161CD0B400E21ECB /* LICENSE.txt in Resources */,
 				2765C6F3161CD0B400E21ECB /* CocoaLumberjack.txt in Resources */,
 			);
