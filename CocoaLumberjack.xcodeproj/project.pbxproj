@@ -96,9 +96,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2765C64E161CC07F00E21ECB /* CocoaLumberjack */ = {
+		2765C64E161CC07F00E21ECB /* CocoaLumberjackOSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2765C664161CC07F00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */;
+			buildConfigurationList = 2765C664161CC07F00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSX" */;
 			buildPhases = (
 				2765C64A161CC07F00E21ECB /* Sources */,
 				2765C64B161CC07F00E21ECB /* Frameworks */,
@@ -109,7 +109,7 @@
 			);
 			dependencies = (
 			);
-			name = CocoaLumberjack;
+			name = CocoaLumberjackOSX;
 			productName = CocoaLumberjack;
 			productReference = 2765C64F161CC07F00E21ECB /* CocoaLumberjack.framework */;
 			productType = "com.apple.product-type.framework";
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2765C64E161CC07F00E21ECB /* CocoaLumberjack */,
+				2765C64E161CC07F00E21ECB /* CocoaLumberjackOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +252,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2765C664161CC07F00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
+		2765C664161CC07F00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2765C665161CC07F00E21ECB /* Debug */,
