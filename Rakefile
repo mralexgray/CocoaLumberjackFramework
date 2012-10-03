@@ -108,7 +108,7 @@ task :pull => :init do
 end
 
 def publish(os = "IOS")
-  github = Github.new :user => $github_username, :repo => $name, :login => $github_username, :password => $github_password
+  github = Github.new :user => $github_username, :repo => $name, :login => $github_login, :password => $github_password
   file = 'build/' + $name + os + ".tar.gz"
   now = File.mtime(file)
   name = $name + os + '-' + now.strftime("%Y-%m-%d-%H-%M-%S") + '.tar.gz'
@@ -123,7 +123,7 @@ def publish(os = "IOS")
 end
 
 desc "Publish the Frameworks to github"
-task :publish => :archive do
+task :publish do
   publish()
   publish("OSX")
 end
