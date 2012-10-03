@@ -91,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2765C67B161CC34100E21ECB /* CocoaLumberjack */ = {
+		2765C67B161CC34100E21ECB /* CocoaLumberjackStaticIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2765C68A161CC34100E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */;
+			buildConfigurationList = 2765C68A161CC34100E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackStaticIOS" */;
 			buildPhases = (
 				2765C678161CC34100E21ECB /* Sources */,
 				2765C679161CC34100E21ECB /* Frameworks */,
@@ -103,7 +103,7 @@
 			);
 			dependencies = (
 			);
-			name = CocoaLumberjack;
+			name = CocoaLumberjackStaticIOS;
 			productName = CocoaLumberjack;
 			productReference = 2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */;
 			productType = "com.apple.product-type.library.static";
@@ -129,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2765C67B161CC34100E21ECB /* CocoaLumberjack */,
+				2765C67B161CC34100E21ECB /* CocoaLumberjackStaticIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -228,13 +228,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2765C68A161CC34100E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
+		2765C68A161CC34100E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackStaticIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2765C68B161CC34100E21ECB /* Debug */,
 				2765C68C161CC34100E21ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
