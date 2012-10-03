@@ -39,6 +39,7 @@
 		2765C6B7161CC59200E21ECB /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */; };
 		2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BC161CCB6A00E21ECB /* LICENSE.txt */; };
 		2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */; };
+		2765C6CE161CCD2B00E21ECB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C6CD161CCD2B00E21ECB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,11 @@
 		2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		2765C6BC161CCB6A00E21ECB /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLumberjack.txt; path = Licenses/CocoaLumberjack.txt; sourceTree = "<group>"; };
+		2765C6CC161CCD2B00E21ECB /* CocoaLumberjackOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjackOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2765C6CD161CCD2B00E21ECB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2765C6D0161CCD2B00E21ECB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2765C6D1161CCD2B00E21ECB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2765C6D2161CCD2B00E21ECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2765C680161CC34100E21ECB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2765C6C8161CCD2B00E21ECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2765C6CE161CCD2B00E21ECB /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */,
+				2765C6CC161CCD2B00E21ECB /* CocoaLumberjackOSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				2765C67F161CC34100E21ECB /* Foundation.framework */,
+				2765C6CD161CCD2B00E21ECB /* Cocoa.framework */,
+				2765C6CF161CCD2B00E21ECB /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +180,16 @@
 			name = Licenses;
 			sourceTree = "<group>";
 		};
+		2765C6CF161CCD2B00E21ECB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2765C6D0161CCD2B00E21ECB /* AppKit.framework */,
+				2765C6D1161CCD2B00E21ECB /* CoreData.framework */,
+				2765C6D2161CCD2B00E21ECB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -177,6 +204,13 @@
 				2765C6AD161CC57A00E21ECB /* DDTTYLogger.h in Headers */,
 				2765C6B4161CC59200E21ECB /* ContextFilterLogFormatter.h in Headers */,
 				2765C6B6161CC59200E21ECB /* DispatchQueueLogFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2765C6C9161CCD2B00E21ECB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +236,24 @@
 			productReference = 2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		2765C6CB161CCD2B00E21ECB /* CocoaLumberjackOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2765C6DD161CCD2B00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSX" */;
+			buildPhases = (
+				2765C6C7161CCD2B00E21ECB /* Sources */,
+				2765C6C8161CCD2B00E21ECB /* Frameworks */,
+				2765C6C9161CCD2B00E21ECB /* Headers */,
+				2765C6CA161CCD2B00E21ECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaLumberjackOSX;
+			productName = CocoaLumberjackOSX;
+			productReference = 2765C6CC161CCD2B00E21ECB /* CocoaLumberjackOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,9 +277,20 @@
 			targets = (
 				2765C67B161CC34100E21ECB /* CocoaLumberjackStaticIOS */,
 				2765C6C0161CCBC500E21ECB /* CocoaLumberjackIOS */,
+				2765C6CB161CCD2B00E21ECB /* CocoaLumberjackOSX */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2765C6CA161CCD2B00E21ECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		2765C6BA161CC96800E21ECB /* Prepare Framework */ = {
@@ -272,6 +335,13 @@
 				2765C6A7161CC4F600E21ECB /* DDTTYLogger.m in Sources */,
 				2765C6B5161CC59200E21ECB /* ContextFilterLogFormatter.m in Sources */,
 				2765C6B7161CC59200E21ECB /* DispatchQueueLogFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2765C6C7161CCD2B00E21ECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +459,56 @@
 			};
 			name = Release;
 		};
+		2765C6DE161CCD2B00E21ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaLumberjackOSX/CocoaLumberjackOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CocoaLumberjackOSX/CocoaLumberjackOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		2765C6DF161CCD2B00E21ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaLumberjackOSX/CocoaLumberjackOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CocoaLumberjackOSX/CocoaLumberjackOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +535,14 @@
 			buildConfigurations = (
 				2765C6C2161CCBC600E21ECB /* Debug */,
 				2765C6C3161CCBC600E21ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2765C6DD161CCD2B00E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2765C6DE161CCD2B00E21ECB /* Debug */,
+				2765C6DF161CCD2B00E21ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
