@@ -22,7 +22,8 @@
 		2765C6B5161CC59200E21ECB /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B0161CC59200E21ECB /* ContextFilterLogFormatter.m */; };
 		2765C6B6161CC59200E21ECB /* DispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C6B1161CC59200E21ECB /* DispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2765C6B7161CC59200E21ECB /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */; };
-		2765C6B9161CC5E500E21ECB /* LICENSE.md in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6B8161CC5D400E21ECB /* LICENSE.md */; };
+		2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BC161CCB6A00E21ECB /* LICENSE.txt */; };
+		2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +33,8 @@
 			dstPath = "${PRODUCT_NAME}Resources";
 			dstSubfolderSpec = 16;
 			files = (
-				2765C6B9161CC5E500E21ECB /* LICENSE.md in CopyFiles */,
+				2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */,
+				2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +57,8 @@
 		2765C6B0161CC59200E21ECB /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		2765C6B1161CC59200E21ECB /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		2765C6B8161CC5D400E21ECB /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.md; sourceTree = SOURCE_ROOT; };
+		2765C6BC161CCB6A00E21ECB /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLumberjack.txt; path = Licenses/CocoaLumberjack.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 			children = (
 				2765C681161CC34100E21ECB /* CocoaLumberjack */,
 				2765C67E161CC34100E21ECB /* Frameworks */,
+				2765C6BB161CCB5900E21ECB /* Licenses */,
 				2765C67D161CC34100E21ECB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,17 +113,8 @@
 				2765C69B161CC4EC00E21ECB /* DDLog.m */,
 				2765C69C161CC4EC00E21ECB /* DDTTYLogger.h */,
 				2765C69D161CC4EC00E21ECB /* DDTTYLogger.m */,
-				2765C682161CC34100E21ECB /* Supporting Files */,
 			);
 			path = CocoaLumberjack;
-			sourceTree = "<group>";
-		};
-		2765C682161CC34100E21ECB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2765C6B8161CC5D400E21ECB /* LICENSE.md */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2765C6AE161CC59200E21ECB /* Extensions */ = {
@@ -133,6 +128,15 @@
 			name = Extensions;
 			path = Frameworks/CocoaLumberjack/Lumberjack/Extensions;
 			sourceTree = SOURCE_ROOT;
+		};
+		2765C6BB161CCB5900E21ECB /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				2765C6BC161CCB6A00E21ECB /* LICENSE.txt */,
+				2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */,
+			);
+			name = Licenses;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
