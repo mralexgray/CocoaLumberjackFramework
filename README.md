@@ -14,12 +14,11 @@ the Framework functions. This makes debugging a little more difficult.
 
 # Procedure
 
-This is a description of how this was achieved.
+This is a general description of how this was achieved.
 
 1.  Create directory
 2.  Add standard .gitignore
-3.  Add License file
-    e.g. MIT License
+3.  Add License file (e.g. the MIT License)
 4.  Add standard rakefile and rakefile.config
 5.  Add existing project as submodule in Frameworks folder
     e.g. Frameworks/CocoaLumberjack
@@ -29,27 +28,27 @@ This is a description of how this was achieved.
 8.  Copy CocoaLumberjack.xcodeproj and CocoaLumberjack folder to the directory
 9.  Open CocoaLumberjack.xcodeproj
 10.  Rename static iOS target to CocoaLumberjackStaticIOS
-11.  `Build Settings` for CocoaLumberjackStaticIOS
-    Architecture: If you want to support the iPhone 3G, add armv6
-    Build Active Architecture Only: Yes for Debug
-    Strip Debug Symbols During Copy: No
-    Strip Style: Non-Global Symbols
-    iOS Deployment Target: Choose appropriate deployment target like iOS 4.0
-    Dead Code Stripping: No
-    Private Headers Folder Path: `$(PRODUCT_NAME)PrivateHeaders`
-    Product Name: `$(PROJECT_NAME)`
-    Public Headers Folder Path: `$(PRODUCT_NAME)Headers`
+11.  `Build Settings` for CocoaLumberjackStaticIOS  
+    Architecture: If you want to support the iPhone 3G, add armv6  
+    Build Active Architecture Only: Yes for Debug  
+    Strip Debug Symbols During Copy: No  
+    Strip Style: Non-Global Symbols  
+    iOS Deployment Target: Choose appropriate deployment target like iOS 4.0  
+    Dead Code Stripping: No  
+    Private Headers Folder Path: `$(PRODUCT_NAME)PrivateHeaders`  
+    Product Name: `$(PROJECT_NAME)`  
+    Public Headers Folder Path: `$(PRODUCT_NAME)Headers`  
 12. Validate Project Settings
 13. Add references for source and header files to project.
     This can be achieved by simply dragging the appropriate files into the project.
-14. `Build Phases` for CocoaLumberjackStaticIOS
-    Add *.m files to `Compile Sources`
-    Add a `Copy Headers` build phase
-    Add *.h files to `Copy Headers` and make them Public
-15. Add a reference for all license files
-    For example by dragging it into the `Supporting Files` folder.
-16. `Copy Files` build phase of CocoaLumberjackStaticIOS
-    Add License file
+14. `Build Phases` for CocoaLumberjackStaticIOS  
+    Add \*.m files to `Compile Sources`  
+    Add a `Copy Headers` build phase  
+    Add \*.h files to `Copy Headers` and make them Public  
+15. Add a reference for all license files by for example dragging it into the
+    `Supporting Files` folder.
+16. `Copy Files` build phase of CocoaLumberjackStaticIOS  
+    Add License file  
     Subpath: ${PRODUCT_NAME}Resources
 17. Add `Run Script` phase
 18. Rename phase to `Prepare Framework`
@@ -76,9 +75,10 @@ This is a description of how this was achieved.
 21. Rename CocoaLumberjack to CocoaLumberjackStaticIOS and make it Shared
 22. Add `Aggregate Target` with the name CocoaLumberjackIOS
 23. Manage Schemes and make CocoaLumberjackIOS Shared
-24. `Build Settings` of CocoaLumberjackIOS:
+24. `Build Settings` of CocoaLumberjackIOS:  
     Product Name: $(PROJECT_NAME)
-25. `Build Phases` of CocoaLumberjackIOS: Make CocoaLumberjackStaticIOS a `Target Dependency`
+25. `Build Phases` of CocoaLumberjackIOS:  
+    Make CocoaLumberjackStaticIOS a `Target Dependency`
 26. Add `Run Script` phase
 27. Rename phase to `Build Framework`
 28. Insert script
@@ -143,15 +143,15 @@ This is a description of how this was achieved.
 29. Add Target `Cocoa Framework` with name `CocoaLumberjackOSX`
 30. Manage Schemes and make CocoaLumberjackOSX Shared
 31. Delete `CocoaLumberjackOSX` folder
-32. `Build Settings` for CocoaLumberjackOSX
-    Info.plist File: Clear Entry
-    Installation Directory: @executable_path/../Frameworks
-    OS X Deployment Target: Choose appropriate. E.g. OS X 10.6
-    Skip Install: Yes
-    Remove GCC_PREFIX_HEADER
-    Remove GCC_PRECOMPILE_PREFIX_HEADER
-33. `Build Phases` for CocoaLumberjackOSX
-    Add *.m files to `Compile Sources`
-    Add *.h files to `Copy Headers` and make them Public
+32. `Build Settings` for CocoaLumberjackOSX  
+    Info.plist File: Clear Entry  
+    Installation Directory: @executable_path/../Frameworks  
+    OS X Deployment Target: Choose appropriate. E.g. OS X 10.6  
+    Skip Install: Yes  
+    Remove GCC_PREFIX_HEADER  
+    Remove GCC_PRECOMPILE_PREFIX_HEADER  
+33. `Build Phases` for CocoaLumberjackOSX  
+    Add *.m files to `Compile Sources`  
+    Add *.h files to `Copy Headers` and make them Public  
 34. Add licenses to `Copy Bundle Resources` phase
 35. Done.
