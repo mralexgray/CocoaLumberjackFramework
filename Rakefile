@@ -122,8 +122,24 @@ def publish(os = "IOS")
   github.repos.downloads.upload res, file
 end
 
+desc "Checks whether all parameters are set for uploading to GitHub"
+task :check_parameters do
+  if !defined? $github_username
+    puts("$github_username is not set");
+    exit(1)
+  end
+  if !defined? $github_login
+    puts("$github_login is not set");
+    exit(1)
+  end
+  if !defined? $github_password
+    puts("$github_password is not set");
+    exit(1)
+  end
+end
+
 desc "Publish the Frameworks to github"
-task :publish => :archive do
+task :publish => [:check_parameters, :archive] do
   publish()
   publish("OSX")
 end
