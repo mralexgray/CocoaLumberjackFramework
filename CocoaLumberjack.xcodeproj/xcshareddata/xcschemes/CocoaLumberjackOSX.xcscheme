@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2765C6CB161CCD2B00E21ECB"
-               BuildableName = "CocoaLumberjackOSX.framework"
+               BuildableName = "CocoaLumberjack.framework"
                BlueprintName = "CocoaLumberjackOSX"
                ReferencedContainer = "container:CocoaLumberjack.xcodeproj">
             </BuildableReference>
