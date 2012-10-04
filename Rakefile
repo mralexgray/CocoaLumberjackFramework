@@ -110,7 +110,7 @@ end
 def publish(os = "IOS")
   github = Github.new :user => $github_username, :repo => $name, :login => $github_login, :password => $github_password
   file = 'build/' + $name + os + ".tar.gz"
-  version = open("VERSION").gets
+  version = open("VERSION").gets.strip
   name = $name + os + '-' + version + '.tar.gz'
   size = File.size(file)
   description = os + " Framework version " + version
@@ -123,7 +123,7 @@ def publish(os = "IOS")
 end
 
 desc "Publish the Frameworks to github"
-task :publish => :archive do
+task :publish do
   publish()
   publish("OSX")
 end
