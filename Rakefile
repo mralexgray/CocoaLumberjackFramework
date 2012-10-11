@@ -7,6 +7,10 @@ if File.exist?('Rakefile.config')
 end
 
 $name="CocoaLumberjack"
+
+$github_user='ase-lab'
+$github_repo='CocoaLumberjackFramework'
+
 $configuration="Release"
 
 project=Xcode.project($name)
@@ -108,13 +112,13 @@ task :pull => :init do
 end
 
 def publish(os = "IOS")
-  github = Github.new :user => $github_username, :repo => $name, :login => $github_login, :password => $github_password
+  github = Github.new :user => $github_user, :repo => $github_repo, :login => $github_login, :password => $github_password
   file = 'build/' + $name + os + ".tar.gz"
   version = open("VERSION").gets.strip
   name = $name + os + '-' + version + '.tar.gz'
   size = File.size(file)
   description = os + " Framework version " + version
-  res = github.repos.downloads.create $github_username, $name,
+  res = github.repos.downloads.create $github_user, $github_repo,
     "name" => name,
     "size" => size,
     "description" => description,
@@ -124,10 +128,6 @@ end
 
 desc "Checks whether all parameters are set for uploading to GitHub"
 task :check_parameters do
-  if !defined? $github_username
-    puts("$github_username is not set");
-    exit(1)
-  end
   if !defined? $github_login
     puts("$github_login is not set");
     exit(1)

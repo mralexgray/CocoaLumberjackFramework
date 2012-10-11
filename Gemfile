@@ -1,7 +1,5 @@
-#ruby=1.9.3
-
 source "http://rubygems.org"
 
-gem "rake", "~> 0.9.2.2"
-gem 'xcoder', :git => "git://github.com/rayh/xcoder.git"
+gem "rake"
+gem "xcoder"
 gem "github_api"
