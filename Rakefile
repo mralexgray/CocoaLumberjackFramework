@@ -111,10 +111,9 @@ task :pull => :init do
   system("git submodule foreach --recursive git pull")
 end
 
-def publish(os = "IOS")
+def publish(version, os = "IOS")
   github = Github.new :user => $github_user, :repo => $github_repo, :login => $github_login, :password => $github_password
   file = 'build/' + $name + os + ".tar.gz"
-  version = open("VERSION").gets.strip
   name = $name + os + '-' + version + '.tar.gz'
   size = File.size(file)
   description = os + " Framework version " + version
@@ -126,8 +125,12 @@ def publish(os = "IOS")
   github.repos.downloads.upload res, file
 end
 
-desc "Checks whether all parameters are set for uploading to GitHub"
-task :check_parameters do
+desc "Publish a new version of the framework to github"
+task :publish, :version do |t, args|
+  if !args[:version]
+    puts("Usage: rake publish[version]");
+    exit(1)
+  end
   if !defined? $github_login
     puts("$github_login is not set");
     exit(1)
@@ -136,10 +139,20 @@ task :check_parameters do
     puts("$github_password is not set");
     exit(1)
   end
-end
-
-desc "Publish the Frameworks to github"
-task :publish => [:check_parameters, :archive] do
-  publish()
-  publish("OSX")
+  version = args[:version]
+  #check that version is newer than current_version
+  current_version = open("VERSION").gets.strip
+  if Gem::Version.new(version) < Gem::Version.new(current_version)
+    puts("New version (" + version + ") is smaller than current version ("+current_version+")")
+    exit(1)
+  end
+  #write version into versionfile
+  File.open("VERSION", 'w') {|f| f.write(version) }
+  Rake::Task["archive"].invoke
+  system("git add VERSION")
+  system('git commit -m "Incremented version number to ' + version + '"')
+  system('git tag -a v' + version + ' -m "Creating version ' + version + '."')
+  system('git push --tags')
+  publish(version)
+  publish(version, "OSX")
 end
