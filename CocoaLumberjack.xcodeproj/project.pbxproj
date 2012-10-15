@@ -37,8 +37,6 @@
 		2765C6B5161CC59200E21ECB /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B0161CC59200E21ECB /* ContextFilterLogFormatter.m */; };
 		2765C6B6161CC59200E21ECB /* DispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C6B1161CC59200E21ECB /* DispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2765C6B7161CC59200E21ECB /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */; };
-		2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BC161CCB6A00E21ECB /* LICENSE.txt */; };
-		2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */; };
 		2765C6CE161CCD2B00E21ECB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C6CD161CCD2B00E21ECB /* Cocoa.framework */; };
 		2765C6E3161CD06800E21ECB /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B0161CC59200E21ECB /* ContextFilterLogFormatter.m */; };
 		2765C6E4161CD06800E21ECB /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */; };
@@ -54,10 +52,12 @@
 		2765C6EF161CD07300E21ECB /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C698161CC4EC00E21ECB /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2765C6F0161CD07300E21ECB /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C69A161CC4EC00E21ECB /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2765C6F1161CD07300E21ECB /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2765C69C161CC4EC00E21ECB /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2765C6F2161CD0B400E21ECB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2765C6BC161CCB6A00E21ECB /* LICENSE.txt */; };
-		2765C6F3161CD0B400E21ECB /* CocoaLumberjack.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */; };
-		277E3C76161CE4CD006FEAA5 /* VERSION in CopyFiles */ = {isa = PBXBuildFile; fileRef = 277E3C74161CE4C2006FEAA5 /* VERSION */; };
-		277E3C77161CE4D2006FEAA5 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 277E3C74161CE4C2006FEAA5 /* VERSION */; };
+		27C38C91162B95DA006E831C /* License-CocoaLumberjack.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */; };
+		27C38C92162B95DA006E831C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27C38C8F162B95DA006E831C /* License.txt */; };
+		27C38C93162B95DA006E831C /* Version in Resources */ = {isa = PBXBuildFile; fileRef = 27C38C90162B95DA006E831C /* Version */; };
+		27C38C94162B95E2006E831C /* License-CocoaLumberjack.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */; };
+		27C38C95162B95E2006E831C /* License.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38C8F162B95DA006E831C /* License.txt */; };
+		27C38C96162B95E2006E831C /* Version in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38C90162B95DA006E831C /* Version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,9 +77,9 @@
 			dstPath = "${PRODUCT_NAME}Resources";
 			dstSubfolderSpec = 16;
 			files = (
-				2765C6BE161CCB7700E21ECB /* LICENSE.txt in CopyFiles */,
-				277E3C76161CE4CD006FEAA5 /* VERSION in CopyFiles */,
-				2765C6BF161CCB7700E21ECB /* CocoaLumberjack.txt in CopyFiles */,
+				27C38C94162B95E2006E831C /* License-CocoaLumberjack.txt in CopyFiles */,
+				27C38C95162B95E2006E831C /* License.txt in CopyFiles */,
+				27C38C96162B95E2006E831C /* Version in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,14 +102,14 @@
 		2765C6B0161CC59200E21ECB /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		2765C6B1161CC59200E21ECB /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		2765C6B2161CC59200E21ECB /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		2765C6BC161CCB6A00E21ECB /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLumberjack.txt; path = Licenses/CocoaLumberjack.txt; sourceTree = "<group>"; };
 		2765C6CC161CCD2B00E21ECB /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2765C6CD161CCD2B00E21ECB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		2765C6D0161CCD2B00E21ECB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2765C6D1161CCD2B00E21ECB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2765C6D2161CCD2B00E21ECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		277E3C74161CE4C2006FEAA5 /* VERSION */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-CocoaLumberjack.txt"; sourceTree = "<group>"; };
+		27C38C8F162B95DA006E831C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		27C38C90162B95DA006E831C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,9 +194,9 @@
 		2765C6BB161CCB5900E21ECB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				277E3C74161CE4C2006FEAA5 /* VERSION */,
-				2765C6BC161CCB6A00E21ECB /* LICENSE.txt */,
-				2765C6BD161CCB7000E21ECB /* CocoaLumberjack.txt */,
+				27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */,
+				27C38C8F162B95DA006E831C /* License.txt */,
+				27C38C90162B95DA006E831C /* Version */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -315,9 +315,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277E3C77161CE4D2006FEAA5 /* VERSION in Resources */,
-				2765C6F2161CD0B400E21ECB /* LICENSE.txt in Resources */,
-				2765C6F3161CD0B400E21ECB /* CocoaLumberjack.txt in Resources */,
+				27C38C91162B95DA006E831C /* License-CocoaLumberjack.txt in Resources */,
+				27C38C92162B95DA006E831C /* License.txt in Resources */,
+				27C38C93162B95DA006E831C /* Version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
