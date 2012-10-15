@@ -4,13 +4,13 @@
     and unarchive.
 2.  Drag the Framework(s) into Xcode adding it/them to your target.
 3.  *iOS*: In the *Build Settings* of your target set **Other Linker Flags** to `-ObjC`
-4.  *OS&nbsp;X*: Make sure to copy the Framework(s) into the application
-    (see [OS&nbsp;X](#)).
+4.  *OS X*: Make sure to copy the Framework(s) into the application
+    (see [OS X](#)).
 
 # What is CocoaLumberjackFramework?
 
 A Framework distribution of 
-[CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack) for iOS and OS&nbsp;X.
+[CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack) for iOS and OS X.
 
 # Motivation
 
@@ -29,7 +29,7 @@ There are no requirements.
 # Compatibility
 
 *   Software
-    *   OS&nbsp;X 10.6 and later
+    *   OS X 10.6 and later
     *   iOS 4.0 and later
 *   Architecture (fat binary with armv6 and armv7)
     *   iPhone 3G and later
@@ -43,7 +43,7 @@ There are no requirements.
 3.  Make sure the appropriate target is linking the Framework(s).
 4.  *iOS*: Go to *Build Settings* and append `-ObjC` to the **Other Linker Flags**
     setting.
-5.  *OS&nbsp;X*: Create a *Copy Files* build phase with the target *Frameworks*
+5.  *OS X*: Create a *Copy Files* build phase with the target *Frameworks*
     and add the Framework(s).
 
 # Examples
