@@ -2,18 +2,20 @@ require 'rubygems'
 require 'xcoder'
 require 'github_api'
 
+# This file stores $github_login and $github_password which are
+# used for publishing a download
 if File.exist?('Rakefile.config')
   load 'Rakefile.config'
 end
 
-#The name of the project (also used for the Xcode project and loading the schemes)
+# The name of the project (also used for the Xcode project and loading the schemes)
 $name='CocoaLumberjack'
 
-#The user under which the repository is hosted. Used when publishing a download.
+# The user and repository name on GitHub. Used when publishing a download.
 $github_user='ase-lab'
 $github_repo='CocoaLumberjackFramework'
 
-#The configuration to build: 'Debug' or 'Release'
+# The configuration to build: 'Debug' or 'Release'
 $configuration='Release'
 
 desc 'Clean, Build, Test and Archive for iOS and OS X'
@@ -116,7 +118,8 @@ end
 
 desc 'Initialize and update all submodules recursively'
 task :init do
-  system('git submodule foreach --recursive "git submodule update --init && git checkout master"')
+  system('git submodule foreach --recursive "git submodule update --init && \
+    git checkout master"')
 end
 
 desc 'Pull all submodules recursively'
@@ -131,7 +134,10 @@ def publish(version, os)
 
   size = File.size(file)
 
-  github = Github.new :user => $github_user, :repo => $github_repo, :login => $github_login, :password => $github_password
+  github = Github.new(:user => $github_user,
+                      :repo => $github_repo,
+                      :login => $github_login,
+                      :password => $github_password)
   res = github.repos.downloads.create $github_user, $github_repo,
     'name' => name,
     'size' => size,
@@ -140,7 +146,7 @@ def publish(version, os)
   github.repos.downloads.upload res, file
 end
 
-desc 'Publish a new version of the framework to github'
+desc 'Publish a new version to GitHub'
 task :publish, :version do |t, args|
   if !args[:version]
     puts('Usage: rake publish[version]');
@@ -155,15 +161,18 @@ task :publish, :version do |t, args|
     exit(1)
   end
   version = args[:version]
-  #check that version is newer than current_version
+  # check that version is newer than current_version
   current_version = open('Version').gets.strip
   if Gem::Version.new(version) < Gem::Version.new(current_version)
     puts('New version (' + version + ') is smaller than current version (' + current_version + ')')
     exit(1)
   end
-  #write version into versionfile
+  # write version into versionfile
   File.open('Version', 'w') {|f| f.write(version) }
+
   Rake::Task['archive'].invoke
+  
+  # build was successful, increment version and push changes
   system('git add Version')
   system('git commit -m "Bump version to ' + version + '"')
   system('git tag -a v' + version + ' -m "Framework version ' + version + '."')
