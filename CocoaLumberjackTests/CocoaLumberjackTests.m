@@ -1,6 +1,10 @@
 #import "CocoaLumberjackTests.h"
 
+#import <CocoaLumberjack/DDAbstractDatabaseLogger.h>
+#import <CocoaLumberjack/DDASLLogger.h>
+#import <CocoaLumberjack/DDFileLogger.h>
 #import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
 
 @implementation CocoaLumberjackTests
 
