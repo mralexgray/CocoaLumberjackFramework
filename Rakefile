@@ -108,7 +108,7 @@ namespace :osx do
   desc 'Test for OS X'
   task :test => [:init, :load_project] do
     $osxtests.build
-    report = $osxtests.test do |report|
+    report = $osxtests.test(:sdk => :macosx) do |report|
 	  report.add_formatter :junit, 'build/'+$configuration+'/test-reports'
       report.add_formatter :stdout
     end
