@@ -25,6 +25,11 @@
 		271173BB1634CD270077D393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173BA1634CD270077D393 /* Cocoa.framework */; };
 		271173C01634CD5A0077D393 /* CocoaLumberjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */; };
 		271173C61634CDD20077D393 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173C11634CDB60077D393 /* SenTestingKit.framework */; };
+		271173C91634CE620077D393 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */; };
+		271173E51634CE900077D393 /* CocoaLumberjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */; };
+		271173E61634CECD0077D393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173BA1634CD270077D393 /* Cocoa.framework */; };
+		271173E71634CED80077D393 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C6CC161CCD2B00E21ECB /* CocoaLumberjack.framework */; };
+		271173E81634CEE60077D393 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173C11634CDB60077D393 /* SenTestingKit.framework */; };
 		2765C69F161CC4F600E21ECB /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C695161CC4EC00E21ECB /* DDAbstractDatabaseLogger.m */; };
 		2765C6A1161CC4F600E21ECB /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C697161CC4EC00E21ECB /* DDASLLogger.m */; };
 		2765C6A3161CC4F600E21ECB /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765C699161CC4EC00E21ECB /* DDFileLogger.m */; };
@@ -99,6 +104,7 @@
 		271173BE1634CD5A0077D393 /* CocoaLumberjackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjackTests.h; sourceTree = "<group>"; };
 		271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaLumberjackTests.m; sourceTree = "<group>"; };
 		271173C11634CDB60077D393 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		271173CF1634CE850077D393 /* CocoaLumberjackOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaLumberjackOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2765C694161CC4EC00E21ECB /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Frameworks/CocoaLumberjack/Lumberjack/DDAbstractDatabaseLogger.h; sourceTree = SOURCE_ROOT; };
 		2765C695161CC4EC00E21ECB /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Frameworks/CocoaLumberjack/Lumberjack/DDAbstractDatabaseLogger.m; sourceTree = SOURCE_ROOT; };
@@ -125,7 +131,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271173C91634CE620077D393 /* libCocoaLumberjack.a in Frameworks */,
 				271173C61634CDD20077D393 /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271173CB1634CE850077D393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271173E81634CEE60077D393 /* SenTestingKit.framework in Frameworks */,
+				271173E71634CED80077D393 /* CocoaLumberjack.framework in Frameworks */,
+				271173E61634CECD0077D393 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +188,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		271173C41634CDBF0077D393 /* iOS-Testing */ = {
+		271173C41634CDBF0077D393 /* Shared-Testing */ = {
 			isa = PBXGroup;
 			children = (
 				271173C11634CDB60077D393 /* SenTestingKit.framework */,
 			);
-			name = "iOS-Testing";
+			name = "Shared-Testing";
 			sourceTree = "<group>";
 		};
 		2765C671161CC34100E21ECB = {
@@ -196,6 +213,7 @@
 				2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */,
 				2765C6CC161CCD2B00E21ECB /* CocoaLumberjack.framework */,
 				271173A41634CCB20077D393 /* CocoaLumberjackIOSTests.octest */,
+				271173CF1634CE850077D393 /* CocoaLumberjackOSXTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				271173C31634CDBA0077D393 /* iOS */,
-				271173C41634CDBF0077D393 /* iOS-Testing */,
+				271173C41634CDBF0077D393 /* Shared-Testing */,
 				271173BC1634CD440077D393 /* OS X */,
 			);
 			name = Frameworks;
@@ -303,6 +321,24 @@
 			productReference = 271173A41634CCB20077D393 /* CocoaLumberjackIOSTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		271173CE1634CE850077D393 /* CocoaLumberjackOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 271173E21634CE850077D393 /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSXTests" */;
+			buildPhases = (
+				271173CA1634CE850077D393 /* Sources */,
+				271173CB1634CE850077D393 /* Frameworks */,
+				271173CC1634CE850077D393 /* Resources */,
+				271173CD1634CE850077D393 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaLumberjackOSXTests;
+			productName = CocoaLumberjackOSXTests;
+			productReference = 271173CF1634CE850077D393 /* CocoaLumberjackOSXTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		2765C67B161CC34100E21ECB /* CocoaLumberjackStaticIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2765C68A161CC34100E21ECB /* Build configuration list for PBXNativeTarget "CocoaLumberjackStaticIOS" */;
@@ -365,12 +401,20 @@
 				2765C6C0161CCBC500E21ECB /* CocoaLumberjackIOS */,
 				2765C6CB161CCD2B00E21ECB /* CocoaLumberjackOSX */,
 				271173A31634CCB20077D393 /* CocoaLumberjackIOSTests */,
+				271173CE1634CE850077D393 /* CocoaLumberjackOSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		271173A11634CCB20077D393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271173CC1634CE850077D393 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,6 +435,19 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		271173A21634CCB20077D393 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		271173CD1634CE850077D393 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -439,6 +496,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				271173C01634CD5A0077D393 /* CocoaLumberjackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		271173CA1634CE850077D393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271173E51634CE900077D393 /* CocoaLumberjackTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +576,38 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		271173E31634CE850077D393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		271173E41634CE850077D393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -655,6 +752,14 @@
 			buildConfigurations = (
 				271173B41634CCB20077D393 /* Debug */,
 				271173B51634CCB20077D393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		271173E21634CE850077D393 /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271173E31634CE850077D393 /* Debug */,
+				271173E41634CE850077D393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
