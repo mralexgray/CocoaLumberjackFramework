@@ -74,6 +74,13 @@
 			remoteGlobalIDString = 2765C67B161CC34100E21ECB;
 			remoteInfo = CocoaLumberjackStaticIOS;
 		};
+		271173EC1634CFB60077D393 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2765C673161CC34100E21ECB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2765C6CB161CCD2B00E21ECB;
+			remoteInfo = CocoaLumberjackOSX;
+		};
 		2765C6C4161CCC0200E21ECB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2765C673161CC34100E21ECB /* Project object */;
@@ -333,6 +340,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				271173ED1634CFB60077D393 /* PBXTargetDependency */,
 			);
 			name = CocoaLumberjackOSXTests;
 			productName = CocoaLumberjackOSXTests;
@@ -542,6 +550,11 @@
 			isa = PBXTargetDependency;
 			target = 2765C67B161CC34100E21ECB /* CocoaLumberjackStaticIOS */;
 			targetProxy = 271173C71634CDDD0077D393 /* PBXContainerItemProxy */;
+		};
+		271173ED1634CFB60077D393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2765C6CB161CCD2B00E21ECB /* CocoaLumberjackOSX */;
+			targetProxy = 271173EC1634CFB60077D393 /* PBXContainerItemProxy */;
 		};
 		2765C6C5161CCC0200E21ECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -754,6 +767,7 @@
 				271173B51634CCB20077D393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		271173E21634CE850077D393 /* Build configuration list for PBXNativeTarget "CocoaLumberjackOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +776,7 @@
 				271173E41634CE850077D393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2765C676161CC34100E21ECB /* Build configuration list for PBXProject "CocoaLumberjack" */ = {
 			isa = XCConfigurationList;
