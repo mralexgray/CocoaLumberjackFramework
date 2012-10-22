@@ -1,5 +1,7 @@
 #import "CocoaLumberjackTests.h"
 
+#import <CocoaLumberjack/DDLog.h>
+
 @implementation CocoaLumberjackTests
 
 - (void)setUp
@@ -18,7 +20,8 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in CocoaLumberjackTests");
+    int ddLogLevel = LOG_LEVEL_OFF;
+    DDLogVerbose(@"Logging");
 }
 
 @end
