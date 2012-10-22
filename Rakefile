@@ -51,7 +51,7 @@ task :load_project do
   $osx = $project.target($name+'OSX').config($configuration).builder
   $osx.sdk = :macosx
   $osxtests = $project.target($name+'OSXTests').config($configuration).builder
-  $osx.sdk = :macosx
+  $osxtests.sdk = :macosx
 end
 
 desc 'Clean, Build, Test and Archive for iOS'
