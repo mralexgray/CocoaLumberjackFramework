@@ -76,7 +76,7 @@ namespace :ios do
 	  report.add_formatter :junit, 'build/'+$configuration+'-iphonesimulator/test-reports'
       report.add_formatter :stdout
     end
-    if report.failed?
+    if report.failed? || report.suites.count == 0  || report.suites[0].tests.count == 0
       fail('At least one test failed.')
     end
   end
@@ -112,7 +112,7 @@ namespace :osx do
 	  report.add_formatter :junit, 'build/'+$configuration+'/test-reports'
       report.add_formatter :stdout
     end
-    if report.failed?
+    if report.failed? || report.suites.count == 0  || report.suites[0].tests.count == 0
       fail('At least one test failed.')
     end
   end
