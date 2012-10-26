@@ -712,10 +712,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -728,10 +724,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
