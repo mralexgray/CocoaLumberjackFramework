@@ -64,6 +64,8 @@
 		D5A25634163A28C200D1E001 /* DispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A25618163A28C200D1E001 /* DispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5A25635163A28C200D1E001 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25619163A28C200D1E001 /* DispatchQueueLogFormatter.m */; };
 		D5A25636163A28C200D1E001 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A25619163A28C200D1E001 /* DispatchQueueLogFormatter.m */; };
+		D5FE3659163AFBC30090BB94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3656163AFBA70090BB94 /* UIKit.framework */; };
+		D5FE365A163AFBC70090BB94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3653163AFB9F0090BB94 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		D5A25617163A28C200D1E001 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		D5A25618163A28C200D1E001 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		D5A25619163A28C200D1E001 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		D5FE3653163AFB9F0090BB94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D5FE3656163AFBA70090BB94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE365A163AFBC70090BB94 /* CoreGraphics.framework in Frameworks */,
+				D5FE3659163AFBC30090BB94 /* UIKit.framework in Frameworks */,
 				271173C91634CE620077D393 /* libCocoaLumberjack.a in Frameworks */,
 				271173C61634CDD20077D393 /* SenTestingKit.framework in Frameworks */,
 			);
@@ -222,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				271173C41634CDBF0077D393 /* Shared-Testing */,
+				D5FE3658163AFBB50090BB94 /* iOS-Testing */,
 				271173BC1634CD440077D393 /* OS X */,
 			);
 			name = Frameworks;
@@ -266,6 +273,15 @@
 			name = Extensions;
 			path = Frameworks/CocoaLumberjack/Extensions;
 			sourceTree = SOURCE_ROOT;
+		};
+		D5FE3658163AFBB50090BB94 /* iOS-Testing */ = {
+			isa = PBXGroup;
+			children = (
+				D5FE3656163AFBA70090BB94 /* UIKit.framework */,
+				D5FE3653163AFB9F0090BB94 /* CoreGraphics.framework */,
+			);
+			name = "iOS-Testing";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
