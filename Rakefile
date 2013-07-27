@@ -148,12 +148,13 @@ def publish(version, os)
                       :repo => $github_repo,
                       :login => $github_login,
                       :password => $github_password)
-  res = github.repos.downloads.create $github_user, $github_repo,
-    'name' => name,
-    'size' => size,
-    'description' => description,
-    'content_type' => 'application/x-gzip'
-  github.repos.downloads.upload res, file
+  # TODO: wait for https://github.com/peter-murach/github/issues/124
+  #res = github.repos.downloads.create $github_user, $github_repo,
+  #  'name' => name,
+  #  'size' => size,
+  #  'description' => description,
+  #  'content_type' => 'application/x-gzip'
+  #github.repos.downloads.upload res, file
 end
 
 desc 'Publish a new version to GitHub'
