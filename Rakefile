@@ -186,7 +186,7 @@ task :publish, :version do |t, args|
   # build was successful, increment version and push changes
   system('git add Version')
   system('git commit -m "Bump version to ' + version + '"')
-  system('git tag -a v' + version + ' -m "Framework version ' + version + '."')
+  system('git tag -a v' + version + ' -m "Framework version ' + version + '"')
   system('git push')
   system('git push --tags')
 
