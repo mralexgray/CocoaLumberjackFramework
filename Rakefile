@@ -73,7 +73,7 @@ namespace :ios do
   task :test => [:init, :load_project] do
     $iostests.build
     report = $iostests.test do |report|
-	  report.add_formatter :junit, 'build/'+$configuration+'-iphonesimulator/test-reports'
+	  report.add_formatter :junit, 'build/Products/'+$configuration+'-iphonesimulator/test-reports'
       report.add_formatter :stdout
     end
     if report.failed? || report.suites.count == 0  || report.suites[0].tests.count == 0
@@ -83,7 +83,7 @@ namespace :ios do
   
   desc 'Archive for iOS'
   task :archive => ['ios:clean', 'ios:build', 'ios:test'] do
-    cd 'build/' + $configuration + '-iphoneos' do
+    cd 'build/Products/' + $configuration + '-iphoneos' do
       system('tar cvzf "../' + $name + '-iOS.tar.gz" *.framework')
     end
   end
@@ -109,7 +109,7 @@ namespace :osx do
   task :test => [:init, :load_project] do
     $osxtests.build
     report = $osxtests.test(:sdk => :macosx) do |report|
-	  report.add_formatter :junit, 'build/'+$configuration+'/test-reports'
+	  report.add_formatter :junit, 'build/Products/'+$configuration+'/test-reports'
       report.add_formatter :stdout
     end
     if report.failed? || report.suites.count == 0  || report.suites[0].tests.count == 0
@@ -119,7 +119,7 @@ namespace :osx do
 
   desc 'Archive for OS X'
   task :archive => ['osx:clean', 'osx:build', 'osx:test'] do
-    cd 'build/' + $configuration do
+    cd 'build/Products/' + $configuration do
       system('tar cvzf "../' + $name + '-OSX.tar.gz" *.framework')
     end
   end
