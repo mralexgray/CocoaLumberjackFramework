@@ -35,7 +35,7 @@ task :archive => ['ios:archive', 'osx:archive']
 
 desc 'Remove build folder'
 task :remove_build_dir do
-  rm_rf 'build'
+  rm_rf 'Build'
 end
 
 $project
