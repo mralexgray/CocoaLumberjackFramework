@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/ArloL/xcoder.git
+  revision: 1325ed151c9620c0cf04bf4697c5bee388b8a543
+  specs:
+    xcoder (0.1.18)
+      aws-sdk
+      builder
+      colorize
+      multi_json
+      nokogiri
+      plist
+      rest-client
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -18,18 +31,10 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     uuidtools (2.1.4)
-    xcoder (0.1.18)
-      aws-sdk
-      builder
-      colorize
-      multi_json
-      nokogiri
-      plist
-      rest-client
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   rake
-  xcoder
+  xcoder!
