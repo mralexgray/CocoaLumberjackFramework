@@ -52,12 +52,12 @@ namespace :ios do
   task :clean => [:init, :remove_build_dir, :load_project] do
     $ios.clean
   end
-  
+
   desc 'Build for iOS'
   task :build => [:init, :load_project] do
     $ios.build
   end
-  
+
   desc 'Test for iOS'
   task :test => [:init, :load_project] do
     $iostests.build
@@ -69,7 +69,7 @@ namespace :ios do
       fail('At least one test failed.')
     end
   end
-  
+
   desc 'Archive for iOS'
   task :archive => ['ios:clean', 'ios:build', 'ios:test'] do
     cd 'Build/Products/' + $configuration + '-iphoneos' do
@@ -93,7 +93,7 @@ namespace :osx do
   task :build => [:init, :load_project] do
     $osx.build
   end
-  
+
   desc 'Test for OS X'
   task :test => [:init, :load_project] do
     $osxtests.build
@@ -143,7 +143,7 @@ task :publish, :version do |t, args|
   File.open('Version', 'w') {|f| f.write(version) }
 
   Rake::Task['archive'].invoke
-  
+
   # build was successful, increment version and push changes
   system('git add Version')
   system('git commit -m "Bump version to ' + version + '"')
