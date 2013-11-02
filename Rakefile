@@ -29,18 +29,12 @@ end
 
 $project
 $ios
-$iostests
 $osx
-$osxtests
 
 task :load_project do
   $project = Xcode.project($name)
-  $ios = $project.target($name+'IOS').config($configuration).builder
-  $iostests = $project.target($name+'IOSTests').config($configuration).builder
-  $osx = $project.target($name+'OSX').config($configuration).builder
-  $osx.sdk = :macosx
-  $osxtests = $project.target($name+'OSXTests').config($configuration).builder
-  $osxtests.sdk = :macosx
+  $ios = $project.scheme($name+'IOS').builder
+  $osx = $project.scheme($name+'OSX').builder
 end
 
 desc 'Clean, Build, Test and Archive for iOS'
@@ -60,8 +54,7 @@ namespace :ios do
 
   desc 'Test for iOS'
   task :test => [:init, :load_project] do
-    $iostests.build
-    report = $iostests.test do |report|
+    report = $ios.test(:sdk => :iphonesimulator) do |report|
 	  report.add_formatter :junit, 'Build/Products/'+$configuration+'-iphonesimulator/test-reports'
       report.add_formatter :stdout
     end
@@ -96,9 +89,8 @@ namespace :osx do
 
   desc 'Test for OS X'
   task :test => [:init, :load_project] do
-    $osxtests.build
-    report = $osxtests.test(:sdk => :macosx) do |report|
-	  report.add_formatter :junit, 'Build/Products/'+$configuration+'/test-reports'
+    report = $osx.test do |report|
+      report.add_formatter :junit, 'Build/Products/'+$configuration+'/test-reports'
       report.add_formatter :stdout
     end
     if report.failed? || report.suites.count == 0  || report.suites[0].tests.count == 0
