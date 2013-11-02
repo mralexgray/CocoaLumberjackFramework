@@ -27,14 +27,13 @@ task :remove_build_dir do
   rm_rf 'Build'
 end
 
-$project
 $ios
 $osx
 
 task :load_project do
-  $project = Xcode.project($name)
-  $ios = $project.scheme($name+'IOS').builder
-  $osx = $project.scheme($name+'OSX').builder
+  project = Xcode.project($name)
+  $ios = project.scheme($name+'IOS').builder
+  $osx = project.scheme($name+'OSX').builder
 end
 
 desc 'Clean, Build, Test and Archive for iOS'
