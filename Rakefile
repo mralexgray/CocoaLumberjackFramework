@@ -121,15 +121,13 @@ end
 desc 'Increment version'
 task :publish, :version do |t, args|
   if !args[:version]
-    puts('Usage: rake publish[version]');
-    exit(1)
+    fail('Usage: rake publish[version]');
   end
   version = args[:version]
   # check that version is newer than current_version
   current_version = open('Version').gets.strip
   if Gem::Version.new(version) < Gem::Version.new(current_version)
-    puts('New version (' + version + ') is smaller than current version (' + current_version + ')')
-    exit(1)
+    fail('New version (' + version + ') is smaller than current version (' + current_version + ')')
   end
   run('git flow release start ' + version)
   # write version into versionfile
