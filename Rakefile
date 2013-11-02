@@ -66,7 +66,7 @@ namespace :ios do
   desc 'Archive for iOS'
   task :archive => ['ios:clean', 'ios:build', 'ios:test'] do
     cd 'Build/Products/' + $configuration + '-iphoneos' do
-      system('tar cvzf "../' + $name + '-iOS.tar.gz" *.framework')
+      run('tar cvzf "../' + $name + '-iOS.tar.gz" *.framework')
     end
   end
 
@@ -101,7 +101,7 @@ namespace :osx do
   desc 'Archive for OS X'
   task :archive => ['osx:clean', 'osx:build', 'osx:test'] do
     cd 'Build/Products/' + $configuration do
-      system('tar cvzf "../' + $name + '-OSX.tar.gz" *.framework')
+      run('tar cvzf "../' + $name + '-OSX.tar.gz" *.framework')
     end
   end
 
@@ -109,13 +109,13 @@ end
 
 desc 'Initialize and update all submodules recursively'
 task :init do
-  system('git submodule update --init --recursive')
-  system('git submodule foreach --recursive "git checkout master"')
+  run('git submodule update --init --recursive')
+  run('git submodule foreach --recursive "git checkout master"')
 end
 
 desc 'Pull all submodules recursively'
 task :pull => :init do
-  system('git submodule foreach --recursive git pull')
+  run('git submodule foreach --recursive git pull')
 end
 
 desc 'Increment version'
@@ -131,13 +131,23 @@ task :publish, :version do |t, args|
     puts('New version (' + version + ') is smaller than current version (' + current_version + ')')
     exit(1)
   end
+  run('git flow release start ' + version)
   # write version into versionfile
   File.open('Version', 'w') {|f| f.write(version) }
 
   Rake::Task['archive'].invoke
 
   # build was successful, increment version and push changes
-  system('git add Version')
-  system('git commit -m "Bump version to ' + version + '"')
-  system('git push')
+  run('git add Version')
+  run('git commit -m "Bump version to ' + version + '"')
+  run('git flow release finish ' + version)
+  run('git push')
+end
+
+def run cmd
+  result = system(cmd)
+  if !result
+    fail('System command failed: ' + cmd)
+  end
+  result
 end
