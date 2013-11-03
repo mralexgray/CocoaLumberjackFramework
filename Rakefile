@@ -7,8 +7,10 @@ $name='CocoaLumberjack'
 desc 'Clean, Build, Test and Archive for iOS and OS X'
 task :default => [:ios, :osx]
 
-desc 'Cleans for iOS and OS X'
-task :clean => [:remove_build_dir, 'ios:clean', 'osx:clean']
+desc 'Remove the build folder'
+task :clean do
+    rm_rf 'Build'
+end
 
 desc 'Builds for iOS and OS X'
 task :build => ['ios:build', 'osx:build']
@@ -18,11 +20,6 @@ task :test => ['ios:test', 'osx:test']
 
 desc 'Archives for iOS and OS X'
 task :archive => ['ios:archive', 'osx:archive']
-
-desc 'Remove build folder'
-task :remove_build_dir do
-    rm_rf 'Build'
-end
 
 $ios
 $osx
@@ -39,7 +36,7 @@ task :ios => ['ios:clean', 'ios:build', 'ios:test', 'ios:archive']
 namespace :ios do
 
     desc 'Clean for iOS'
-    task :clean => [:init, :remove_build_dir, :load_project] do
+    task :clean => [:init, :load_project] do
         $ios.clean
     end
 
@@ -74,7 +71,7 @@ task :osx => ['osx:clean', 'osx:build', 'osx:test', 'osx:archive']
 namespace :osx do
 
     desc 'Clean for OS X'
-    task :clean => [:init, :remove_build_dir, :load_project] do
+    task :clean => [:init, :load_project] do
         $osx.clean
     end
 
