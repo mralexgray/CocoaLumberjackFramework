@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/ArloL/xcoder.git
-  revision: 1325ed151c9620c0cf04bf4697c5bee388b8a543
+  revision: bc87feda59d489518e624102e5062c6767699971
+  branch: develop
   specs:
     xcoder (0.1.18)
       aws-sdk
