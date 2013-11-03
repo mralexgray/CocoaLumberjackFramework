@@ -846,6 +846,7 @@
 #pragma mark DDLogger Protocol
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+static int exception_count = 0;
 - (void)logMessage:(DDLogMessage *)logMessage
 {
 	NSString *logMsg = logMessage->logMsg;
@@ -863,10 +864,20 @@
 		}
 		
 		NSData *logData = [logMsg dataUsingEncoding:NSUTF8StringEncoding];
-		
-		[[self currentLogFileHandle] writeData:logData];
-		
-		[self maybeRollLogFileDueToSize];
+
+		@try {
+			[[self currentLogFileHandle] writeData:logData];
+
+			[self maybeRollLogFileDueToSize];
+		}
+		@catch (NSException *exception) {
+			exception_count++;
+			if (exception_count <= 10) {
+				NSLogError(@"DDFileLogger.logMessage: %@", exception);
+				if (exception_count == 10)
+					NSLogError(@"DDFileLogger.logMessage: Too many exceptions -- will not log any more of them.");
+			}
+		}
 	}
 }
 
@@ -910,9 +921,9 @@
 
 #pragma mark Lifecycle
 
-+ (id)logFileWithPath:(NSString *)aFilePath
++ (instancetype)logFileWithPath:(NSString *)aFilePath
 {
-	return [[DDLogFileInfo alloc] initWithFilePath:aFilePath];
+	return [[self alloc] initWithFilePath:aFilePath];
 }
 
 - (id)initWithFilePath:(NSString *)aFilePath
@@ -1017,14 +1028,14 @@
 
 - (NSString *)description
 {
-	return [@{@"filePath": self.filePath,
-		@"fileName": self.fileName,
-		@"fileAttributes": self.fileAttributes,
-		@"creationDate": self.creationDate,
-		@"modificationDate": self.modificationDate,
-		@"fileSize": @(self.fileSize),
-		@"age": @(self.age),
-		@"isArchived": @(self.isArchived)} description];
+	return [@{@"filePath": self.filePath ?: @"",
+              @"fileName": self.fileName ?: @"",
+              @"fileAttributes": self.fileAttributes ?: @"",
+              @"creationDate": self.creationDate ?: @"",
+              @"modificationDate": self.modificationDate ?: @"",
+              @"fileSize": @(self.fileSize),
+              @"age": @(self.age),
+              @"isArchived": @(self.isArchived)} description];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
