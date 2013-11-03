@@ -130,9 +130,13 @@ task :publish, :version do |t, args|
 
     # build was successful, increment version and push changes
     run('git add Version')
-    run('git commit -m "Bump version to ' + version + '"')
-    run('git flow release finish ' + version)
-    run('git push')
+    run('git commit -m "Update version to ' + version + '"')
+    run('git checkout master')
+    run('git merge --no-ff -m "Merge branch \'release/' + version + '\'" release/' + version)
+    run('git tag -a -m "Release ' + version + '" ' + version)
+    run('git checkout develop')
+    run('git merge --no-ff -m "Merge branch \'release/' + version + '\'" release/' + version)
+    run('git branch -d release/' + version)
 end
 
 def run cmd
