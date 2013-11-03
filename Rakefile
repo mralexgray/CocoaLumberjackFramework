@@ -137,7 +137,7 @@ task :publish, :version do |t, args|
     run('git checkout develop')
     run('git merge --no-ff -m "Merge branch \'release/' + version + '\'" release/' + version)
     run('git branch -d release/' + version)
-    run('git push')
+    run('git push --tags')
 end
 
 def run cmd
