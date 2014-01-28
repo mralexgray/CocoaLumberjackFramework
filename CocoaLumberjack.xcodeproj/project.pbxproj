@@ -22,12 +22,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		271173BB1634CD270077D393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173BA1634CD270077D393 /* Cocoa.framework */; };
 		271173C01634CD5A0077D393 /* CocoaLumberjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */; };
 		271173C61634CDD20077D393 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173C11634CDB60077D393 /* SenTestingKit.framework */; };
 		271173C91634CE620077D393 /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C67C161CC34100E21ECB /* libCocoaLumberjack.a */; };
 		271173E51634CE900077D393 /* CocoaLumberjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */; };
-		271173E61634CECD0077D393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173BA1634CD270077D393 /* Cocoa.framework */; };
 		271173E71634CED80077D393 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2765C6CC161CCD2B00E21ECB /* CocoaLumberjack.framework */; };
 		271173E81634CEE60077D393 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271173C11634CDB60077D393 /* SenTestingKit.framework */; };
 		27C38C91162B95DA006E831C /* License-CocoaLumberjack.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */; };
@@ -109,8 +107,6 @@
 
 /* Begin PBXFileReference section */
 		271173A41634CCB20077D393 /* CocoaLumberjackIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaLumberjackIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		271173BA1634CD270077D393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		271173BE1634CD5A0077D393 /* CocoaLumberjackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjackTests.h; sourceTree = "<group>"; };
 		271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaLumberjackTests.m; sourceTree = "<group>"; };
 		271173C11634CDB60077D393 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		271173CF1634CE850077D393 /* CocoaLumberjackOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaLumberjackOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,19 +115,19 @@
 		27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-CocoaLumberjack.txt"; sourceTree = "<group>"; };
 		27C38C8F162B95DA006E831C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		27C38C90162B95DA006E831C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
-		D5A2560B163A28C200D1E001 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Frameworks/CocoaLumberjack/DDAbstractDatabaseLogger.h; sourceTree = SOURCE_ROOT; };
+		D5A2560B163A28C200D1E001 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DDAbstractDatabaseLogger.h; path = Frameworks/CocoaLumberjack/DDAbstractDatabaseLogger.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A2560C163A28C200D1E001 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Frameworks/CocoaLumberjack/DDAbstractDatabaseLogger.m; sourceTree = SOURCE_ROOT; };
-		D5A2560D163A28C200D1E001 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Frameworks/CocoaLumberjack/DDASLLogger.h; sourceTree = SOURCE_ROOT; };
+		D5A2560D163A28C200D1E001 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DDASLLogger.h; path = Frameworks/CocoaLumberjack/DDASLLogger.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A2560E163A28C200D1E001 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Frameworks/CocoaLumberjack/DDASLLogger.m; sourceTree = SOURCE_ROOT; };
-		D5A2560F163A28C200D1E001 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Frameworks/CocoaLumberjack/DDFileLogger.h; sourceTree = SOURCE_ROOT; };
+		D5A2560F163A28C200D1E001 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DDFileLogger.h; path = Frameworks/CocoaLumberjack/DDFileLogger.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A25610163A28C200D1E001 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Frameworks/CocoaLumberjack/DDFileLogger.m; sourceTree = SOURCE_ROOT; };
-		D5A25611163A28C200D1E001 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Frameworks/CocoaLumberjack/DDLog.h; sourceTree = SOURCE_ROOT; };
+		D5A25611163A28C200D1E001 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DDLog.h; path = Frameworks/CocoaLumberjack/DDLog.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A25612163A28C200D1E001 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Frameworks/CocoaLumberjack/DDLog.m; sourceTree = SOURCE_ROOT; };
-		D5A25613163A28C200D1E001 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Frameworks/CocoaLumberjack/DDTTYLogger.h; sourceTree = SOURCE_ROOT; };
+		D5A25613163A28C200D1E001 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DDTTYLogger.h; path = Frameworks/CocoaLumberjack/DDTTYLogger.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A25614163A28C200D1E001 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Frameworks/CocoaLumberjack/DDTTYLogger.m; sourceTree = SOURCE_ROOT; };
-		D5A25616163A28C200D1E001 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		D5A25616163A28C200D1E001 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A25617163A28C200D1E001 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		D5A25618163A28C200D1E001 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		D5A25618163A28C200D1E001 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D5A25619163A28C200D1E001 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		D5FE3653163AFB9F0090BB94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D5FE3656163AFBA70090BB94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -155,7 +151,6 @@
 			files = (
 				271173E81634CEE60077D393 /* SenTestingKit.framework in Frameworks */,
 				271173E71634CED80077D393 /* CocoaLumberjack.framework in Frameworks */,
-				271173E61634CECD0077D393 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,25 +165,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271173BB1634CD270077D393 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		271173BC1634CD440077D393 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				271173BA1634CD270077D393 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
 		271173BD1634CD5A0077D393 /* CocoaLumberjackTests */ = {
 			isa = PBXGroup;
 			children = (
-				271173BE1634CD5A0077D393 /* CocoaLumberjackTests.h */,
 				271173BF1634CD5A0077D393 /* CocoaLumberjackTests.m */,
 			);
 			path = CocoaLumberjackTests;
@@ -206,10 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				2765C681161CC34100E21ECB /* CocoaLumberjack */,
-				271173BD1634CD5A0077D393 /* CocoaLumberjackTests */,
-				2765C67E161CC34100E21ECB /* Frameworks */,
 				2765C6BB161CCB5900E21ECB /* Resources */,
-				2765C67D161CC34100E21ECB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,7 +211,6 @@
 			children = (
 				271173C41634CDBF0077D393 /* Shared-Testing */,
 				D5FE3658163AFBB50090BB94 /* iOS-Testing */,
-				271173BC1634CD440077D393 /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,6 +236,9 @@
 		2765C6BB161CCB5900E21ECB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				271173BD1634CD5A0077D393 /* CocoaLumberjackTests */,
+				2765C67E161CC34100E21ECB /* Frameworks */,
+				2765C67D161CC34100E21ECB /* Products */,
 				27C38C8E162B95DA006E831C /* License-CocoaLumberjack.txt */,
 				27C38C8F162B95DA006E831C /* License.txt */,
 				27C38C90162B95DA006E831C /* Version */,
@@ -398,7 +382,7 @@
 		2765C673161CC34100E21ECB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "ASE Group";
 			};
 			buildConfigurationList = 2765C676161CC34100E21ECB /* Build configuration list for PBXProject "CocoaLumberjack" */;
@@ -601,7 +585,6 @@
 		271173E31634CE850077D393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,7 +596,6 @@
 		271173E41634CE850077D393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,8 +608,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -643,7 +628,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -660,8 +647,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -670,7 +660,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -714,8 +706,9 @@
 		2765C6DE161CCD2B00E21ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../../../../../../RoutingHTTPServer-Prefix.pch";
 				INSTALL_PATH = "@loader_path/Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -725,9 +718,10 @@
 		2765C6DF161CCD2B00E21ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/../../../../../../RoutingHTTPServer-Prefix.pch";
 				INSTALL_PATH = "@loader_path/Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;

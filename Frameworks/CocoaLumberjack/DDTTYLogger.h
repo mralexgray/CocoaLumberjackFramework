@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIColor.h>
 #else
-#import <AppKit/NSColor.h>
+@import AppKit;
 #endif
 
 #import "DDLog.h"
